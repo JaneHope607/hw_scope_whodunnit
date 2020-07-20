@@ -28,7 +28,8 @@ const verdict = declareMurderer();
 console.log(verdict);
 ```
 
-<!-- Outcome - 'The murderer is Miss Scarlet' -->
+<!-- Outcome - The murderer is Miss Scarlet. -->
+<!-- Reason: The declareMurderer function returns the string with the murderer value -->
 
 #### Episode 2
 
@@ -48,7 +49,7 @@ const verdict = declareMurderer();
 console.log(verdict);
 ```
 
-<!-- Outcome -->
+<!-- Outcome: Error -->
 <!-- Reason: There would be an error here are the murderer variable is trying to be reasssigned but it is a constant variable so this is not allowed -->
 
 
@@ -69,7 +70,10 @@ const secondVerdict = `The murderer is ${murderer}.`;
 console.log('Second Verdict: ', secondVerdict);
 ```
 
-<!-- Outcome - 'The murderer is Miss Scarlet' -->
+<!-- Outcome - 'First Verdict: Mrs. Peacock.' -->
+<!-- Outcome - 'Second Verdict: Professor Plum.' -->
+<!-- Reason - The first outcome is because the declareMurderer function is called which creates a new local variable
+with 'Mrs. Peacock' assigned to it. The second is because it is calling the murderer vairable directly outside of the function.  -->
 
 
 #### Episode 4
@@ -89,7 +93,9 @@ console.log(suspects);
 console.log(`Suspect three is ${suspectThree}.`);
 ```
 
-<!-- Outcome - 'Suspect three is Colonel Mustard' -->
+<!-- Outcome - 'Suspects are Miss Scarlet, Professor Plum, Colonel Mustard.'
+'Suspect three is Mrs. Peacock' -->
+<!-- Reason: Colonel Mustard has become suspect three for when declareAllSuspects has been called. However in the last console log, it returns the initial suspectThree variable (Mrs peacock )which has remained unchanged due to the reassignment of suspectThree variable only extending to the scope of the declareAllSuspects function -->
 
 
 #### Episode 5
@@ -115,7 +121,7 @@ console.log(verdict);
 ```
 
 <!-- Outcome - The weapon is the revolver. -->
-<!-- Reason - This is because changeWeapon is called with the argument revoler, giving the weapon key a new value of revolver. Then the declareWeapon function is called and stored within a constant varibale, then printed to the console -->
+<!-- Reason - This is because changeWeapon is called with the argument revoler, giving the weapon key a new value of revolver. Then the declareWeapon function is called and stored within a constant varibale, then printed to the console.Objects can be mutated with a cont variable. -->
 
 
 #### Episode 6
@@ -142,7 +148,8 @@ const verdict = declareMurderer();
 console.log(verdict);
 ```
 
-<!-- Outcome - The murderer is the Mrs White. -->
+<!-- Outcome - The murderer is Mrs White. -->
+<!-- Reason: changeMurderer is called which reassigns the value of the variable murderer first to Mr. Green. A second function is then called, plotTist, which reassigns the variable murderer to Mrs. White -->
 
 #### Episode 7
 
@@ -174,7 +181,8 @@ const verdict = declareMurderer();
 console.log(verdict);
 ```
 
-<!-- Outcome - The weapon is the revolver. -->
+<!-- Outcome - The murderer is Mr Green -->
+<!-- Reason: There would be an error here are the murderer variable is trying to be reasssigned but it is a constant variable so this is not allowed -->
 
 #### Episode 8
 
@@ -215,7 +223,8 @@ const verdict = declareWeapon();
 console.log(verdict);
 ```
 
-<!-- Outcome - The weapon is the revolver. --> 
+<!-- Outcome - The weapon is Candle Stick. --> 
+<!-- Reason: changeScenario is called which in turn changes the murderer to Mrs Peacock and the room to Dining Room. plotTwist equates to true so changes the murderer to Colonel Mustard. Then unexpectedOutcome equates to true and so the weapon is changed to Candle Stick. -->
 
 #### Episode 9
 
@@ -234,8 +243,10 @@ const verdict = declareMurderer();
 console.log(verdict);
 ```
 
-<!-- Outcome - The murderer is Professor plum. -->
-<!-- Reason - This murderer refers to the initial declaration of Professor Plum to the murderer variable. As let is block scoped, the murderer variable is not reassigned to Mrs Peacock. -->
+<!-- Outcome - The murderer is Professor Plum. -->
+<!-- Reason - The if statement is reassinging the murderer variable to Mrs. Peacock, only when the condition is true and also 
+only inside that block of code as it us declared using let. This doesn;t affect the intial value of the variable and so 
+in the declareMurderer function, the initial variable value is -->
 
 
 ### Extensions
