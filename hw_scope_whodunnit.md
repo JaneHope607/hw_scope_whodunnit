@@ -72,7 +72,7 @@ console.log('Second Verdict: ', secondVerdict);
 
 <!-- Outcome - 'First Verdict: Mrs. Peacock.' -->
 <!-- Outcome - 'Second Verdict: Professor Plum.' -->
-<!-- Reason - The first outcome is because the declareMurderer function is called which creates a new local variable
+<!-- Reason - The first outcome is such because the declareMurderer function is called which creates a new local variable
 with 'Mrs. Peacock' assigned to it. The second is because it is calling the murderer vairable directly outside of the function.  -->
 
 
@@ -95,7 +95,7 @@ console.log(`Suspect three is ${suspectThree}.`);
 
 <!-- Outcome - 'Suspects are Miss Scarlet, Professor Plum, Colonel Mustard.'
 'Suspect three is Mrs. Peacock' -->
-<!-- Reason: Colonel Mustard has become suspect three for when declareAllSuspects has been called. However in the last console log, it returns the initial suspectThree variable (Mrs peacock )which has remained unchanged due to the reassignment of suspectThree variable only extending to the scope of the declareAllSuspects function -->
+<!-- Reason: Colonel Mustard has been reassigned to the suspectThree variable when declareAllSuspects has been called. However in the last console log, it returns the initial suspectThree variable (Mrs. Peacock) which has remained unchanged due to the reassignment of suspectThree variable only extending to the scope of the declareAllSuspects function -->
 
 
 #### Episode 5
